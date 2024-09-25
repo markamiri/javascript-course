@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .add-to-cart {
+        background-color: yellow;
+      }
+      .buy-now {
+        background-color: orange;
+      }
+    </style>
+    <title>Buttons</title>
+  </head>
+
+  <body>
+    <button>click</button>
+    <div>
+      <button>simon</button>
+      <button>chocolate</button>
+    </div>
+    <p>Hello, world!</p>
+    <p>Today I worked out and got to see my gurlfriend</p>
+
+    <div>
+      <button class="add-to-cart">Add to cart</button>
+      <button class="buy-now">Buy now</button>
+    </div>
+
+    <p>Adults Plain Cotton T-shirt</p>
+    <p>Price: $7.99</p>
+    <div>
+      <button class="add-to-cart" onclick="alert('added')">Add to cart</button>
+      <button
+        class="buy-now"
+        onclick="console.log('Loading...'); alert('Purchased');"
+      >
+        Buy now
+      </button>
+    </div>
+    <script>
+      console.log("Welcome!");
+    </script>
+  </body>
+</html>

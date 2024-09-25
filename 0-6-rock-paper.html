@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>rock paper scissor</title>
+  </head>
+
+  <body>
+    <div>Rock Paper Scissors</div>
+    <div>
+      <button
+        onclick=" let randomNumber = Math.random(); 
+
+        let computerChoice = '';
+        let result = '';
+      if( randomNumber <0.33){
+        computerChoice = 'rock'
+        result='tie'
+        console.log(`rock vs ${computerChoice} ${result}`)
+        
+      }
+      else if (0.66 >randomNumber && randomNumber >0.33 ){
+        computerChoice = 'paper'
+        result='lost'
+        console.log(`rock vs ${computerChoice} ${result}`)
+      }
+      else{
+        computerChoice = 'scissor'
+        result='win'
+        console.log(`rock vs ${computerChoice} ${result}`)
+      };
+
+      alert(`You picked rock. Computer picked ${computerChoice}. You ${result}`);
+
+      
+      "
+      >
+        Rock
+      </button>
+      <button
+        onclick=" randomNumber = Math.random(); 
+
+         computerChoice = '';
+         result = '';
+      if( randomNumber <0.33){
+        computerChoice = 'rock'
+        result='win'
+        console.log(`Paper vs ${computerChoice} ${result}`)
+        
+      }
+      else if (0.66 >randomNumber && randomNumber >0.33 ){
+        computerChoice = 'paper'
+        result='tie'
+        console.log(`paper vs ${computerChoice} ${result}`)
+      }
+      else{
+        computerChoice = 'scissor'
+        result='lost'
+        console.log(`paper vs ${computerChoice} ${result}`)
+      };
+
+      alert(`You picked paper. Computer picked ${computerChoice}. You ${result}`);
+
+      
+      "
+      >
+        Paper
+      </button>
+      <button
+        onclick="randomNumber = Math.random(); 
+
+        computerChoice = '';
+        result = '';
+      if( randomNumber <0.33){
+        computerChoice = 'rock'
+        result='lost'
+        console.log(`Scissor vs ${computerChoice} ${result}`)
+        
+      }
+      else if (0.66 >randomNumber && randomNumber >0.33 ){
+        computerChoice = 'paper'
+        result='Win'
+        console.log(`Scissor vs ${computerChoice} ${result}`)
+      }
+      else{
+        computerChoice = 'scissor'
+        result='tie'
+        console.log(`scissor vs ${computerChoice} ${result}`)
+      };
+
+      alert(`You picked scissor. Computer picked ${computerChoice}. You ${result}`);
+      
+      "
+      >
+        Scissor
+      </button>
+    </div>
+    <script></script>
+  </body>
+</html>

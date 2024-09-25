@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables</title>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+
+    <div>
+      <button onclick="console.log(`Cart Quantity: ${cart}`)">
+        Show Quantity
+      </button>
+      <button onclick="cart +1; console.log(`Cart Quantity: ${cart}`);">
+        Add to Cart
+      </button>
+      <button onclick="cart +=2; console.log(`Cart Quantity: ${cart}`);">
+        +2
+      </button>
+      <button onclick="cart+=3; console.log(`Cart Quantity: ${cart}`)">
+        +3
+      </button>
+      <button onclick="cart+=4; console.log(`Cart Quantity: ${cart}`)">
+        +4
+      </button>
+
+      <button onclick="cart+=5; console.log(`Cart Quantity: ${cart}`)">
+        +5
+      </button>
+
+      <button onclick="cart--; console.log(`Cart Quantity: ${cart}`)">
+        remove from cart
+      </button>
+
+      <button onclick="cart-=2; console.log(`Cart Quantity: ${cart}`)">
+        remove 2 from cart
+      </button>
+
+      <button onclick="cart-=3; console.log(`Cart Quantity: ${cart}`)">
+        remove 3 from cart
+      </button>
+
+      <button
+        onclick="cart = 0; console.log('Cart was cleared');console.log(`Cart Quantity: ${cart}`)"
+      >
+        reset cart
+      </button>
+    </div>
+
+    <script>
+      let variable1 = 3;
+      console.log(variable1);
+
+      const calculation = 2 + 2;
+      console.log(calculation);
+      console.log(calculation + 2);
+
+      const result = calculation + 2;
+      console.log(result);
+
+      const message = "hello";
+      console.log(message);
+      variable1 = 5;
+      console.log(variable1);
+
+      variable1 = variable1 + 1;
+      console.log(variable1);
+
+      const variable3 = 5;
+      var variable = 3;
+      let cart = 0;
+    </script>
+  </body>
+</html>
