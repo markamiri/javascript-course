@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+
+  <body>
+    <button onclick="console.log(`Cart quantity = ${cart}`)">
+      Show quantity
+    </button>
+
+    <button
+      onclick=" if(cart+1 >10){
+        alert('cart is full')
+    }
+    else{
+        cart++
+        console.log(`Cart quantity = ${cart}`)
+    }"
+    >
+      add to cart
+    </button>
+
+    <button
+      onclick=" if(cart-1 <0){
+        alert('cart is empty')
+    }
+    else{
+        cart--
+        console.log(`Cart quantity = ${cart}`)
+    }"
+    >
+      remove from cart
+    </button>
+
+    <script>
+      hour = 14;
+      name = "mark";
+      if (hour >= 6 && hour <= 12) {
+        console.log(`Good morning! ${name}`);
+      } else if (hour >= 13 && hour <= 17) {
+        console.log(`Good afternoon ${name}`);
+      } else {
+        console.log(`goodnight ${name}`);
+      }
+
+      age = 5;
+      const isholiday = false;
+
+      if ((age <= 6 || age >= 65) && isholiday === false) {
+        console.log(`discount`);
+      } else {
+        console.log(`no discount`);
+      }
+
+      guess = "heads";
+      randomNumber = Math.random();
+      let result = "";
+      if (
+        (randomNumber < 0.5 && guess === "heads") ||
+        (randomNumber > 0.5 && guess === "tails")
+      ) {
+        result = "heads";
+        console.log(` number is ${randomNumber} You win  ${guess}`);
+      } else {
+        result = "tails";
+        console.log(` number is ${randomNumber} You lose ${guess}`);
+      }
+
+      guess = "heads";
+      randomNumber = Math.random();
+      const res = randomNumber < 0.5 ? "heads" : "tails";
+      console.log(randomNumber);
+      console.log(guess === res ? "you win" : "you lose");
+
+      quantity = 9;
+      console.log(quantity < 10 ? (quantity += 1) : alert("cart is full"));
+
+      cart = 10;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+  </head>
+
+  <body>
+    <div>Rock Paper Scissors</div>
+    <div>
+      <button onclick="rock()">Rock</button>
+      <button onclick="paper()">Paper</button>
+      <button onclick="scissors()">Scissors</button>
+    </div>
+
+    <script>
+      function rock() {
+        let randomNumber = Math.random();
+        let computerChoice = "";
+        let result = "";
+
+        if (randomNumber < 0.33) {
+          computerChoice = "rock";
+          result = "tie";
+        } else if (randomNumber < 0.66) {
+          computerChoice = "paper";
+          result = "lost";
+        } else {
+          computerChoice = "scissors";
+          result = "win";
+        }
+
+        let output = `You picked rock. Computer picked ${computerChoice}. You ${result}`;
+        alert(output); // Alert the result
+        return output; // Return for logging
+      }
+
+      function paper() {
+        let randomNumber = Math.random();
+        let computerChoice = "";
+        let result = "";
+
+        if (randomNumber < 0.33) {
+          computerChoice = "rock";
+          result = "win";
+        } else if (randomNumber < 0.66) {
+          computerChoice = "paper";
+          result = "tie";
+        } else {
+          computerChoice = "scissors";
+          result = "lost";
+        }
+
+        let output = `You picked paper. Computer picked ${computerChoice}. You ${result}`;
+        alert(output); // Alert the result
+        return output; // Return for logging
+      }
+
+      function scissor() {
+        let randomNumber = Math.random();
+        let computerChoice = "";
+        let result = "";
+
+        if (randomNumber < 0.33) {
+          computerChoice = "rock";
+          result = "lost";
+        } else if (randomNumber < 0.66) {
+          computerChoice = "paper";
+          result = "win";
+        } else {
+          computerChoice = "scissors";
+          result = "tie";
+        }
+
+        let output = `You picked scissors. Computer picked ${computerChoice}. You ${result}`;
+        alert(output); // Alert the result
+        return output; // Return for logging
+      }
+    </script>
+  </body>
+</html>
