@@ -9,8 +9,31 @@
     <button onclick="playermove('rock')">rock</button>
     <button onclick="playermove('paper')">paper</button>
     <button onclick="playermove('scissor')">scissors</button>
+    <button
+      onclick="        score.loss = 0;
+        score.wins = 0;
+        score.ties = 0;
+        localStorage.removeItem('score')"
+    >
+      Reset Score
+    </button>
 
     <script>
+      let score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        loss: 0,
+        ties: 0,
+      };
+      /*
+      if (!score) {
+        score = {
+          wins: 0,
+          loss: 0,
+          ties: 0,
+        };
+      }
+        */
+
       function ComputerMove() {
         const randomNumber = Math.random();
 
@@ -35,32 +58,43 @@
         if (move === "rock") {
           if (compmove === "rock") {
             result = "you tie";
+            score.ties += 1;
           } else if (compmove === "paper") {
             result = "you lose";
+            score.loss += 1;
           } else {
             result = "you win";
+            score.wins += 1;
           }
         } else if (move === "paper") {
           if (compmove === "paper") {
             result = "you tie";
+            score.ties += 1;
           } else if (compmove === "scissor") {
             result = "you lose";
+            score.loss += 1;
           } else {
             result = "you win";
+            score.wins += 1;
           }
         } else if (move === "scissor") {
           if (compmove === "scissor") {
             result = "you tie";
+            score.ties += 1;
           } else if (compmove === "rock") {
             result = "you lose";
+            score.loss += 1;
           } else if (compmove === "paper") {
             result = "you win";
+            score.wins += 1;
           }
         }
 
         alert(
-          `you picked ${move} and the computer picked ${compmove}. ${result}`
+          `you picked ${move} and the computer picked ${compmove}. ${result} .
+ScoreBoard Wins:${score.wins}, Loss:${score.loss}, tie:${score.ties}`
         );
+        localStorage.setItem("score", JSON.stringify(score));
       }
     </script>
   </body>
