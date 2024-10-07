@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button onclick="updateCalc('1')">1</button>
+    <button onclick="updateCalc('2')">2</button>
+    <button onclick="updateCalc('3')">3</button>
+    <button onclick="updateCalc('4')">4</button>
+    <button onclick="updateCalc('5')">5</button>
+    <button onclick="updateCalc('6')">6</button>
+    <button onclick="updateCalc('7')">7</button>
+    <button onclick="updateCalc('8')">8</button>
+    <button onclick="updateCalc('9')">9</button>
+    <button onclick="updateCalc(' + ')">+</button>
+    <button onclick="updateCalc(' - ')">-</button>
+    <button onclick="updateCalc(' * ' )">*</button>
+    <button onclick="updateCalc(' / ')">/</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="clearupdate()">clear</button>
+    <p class="result"></p>
+
+    <script>
+      let res = localStorage.getItem("calculation") || "";
+
+      function updateCalc(item) {
+        res += item;
+        document.querySelector(".result").innerHTML = `${res}`;
+
+        localStorage.setItem("calculation", res);
+      }
+
+      function calculate() {
+        try {
+          res = eval(res);
+          document.querySelector(".result").innerHTML = `${res}`;
+          localStorage.setItem("calculation", res);
+        } catch (error) {
+          document.querySelector(".result").innerHTML = `Error`;
+        }
+      }
+
+      function clearupdate() {
+        res = "";
+        document.querySelector(".result").innerHTML = `${res}`;
+        localStorage.setItem("calculation", res);
+      }
+    </script>
+  </body>
+</html>

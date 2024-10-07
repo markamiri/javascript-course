@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <!--9a-->
+    <button>9a</button>
+    <!--9b-->
+    <button class="nineb">9b</button>
+    <!--9c-->
+    <button class="heads" onclick="headsdisplay()">heads</button>
+    <button class="tails" onclick="tailsdisplay()">tails</button>
+    <p class="res">hello</p>
+    <!--9d-->
+
+    <input
+      type="text"
+      placeholder="Name"
+      class="nameInput"
+      onkeydown="handlenamekeydown(event)"
+    />
+    <button onclick="getName()">submit</button>
+    <p class="name"></p>
+
+    <!--9h-->
+    <input
+      type="text"
+      placeholder="Type Something"
+      class="livetype"
+      onkeyup="handlelivekeyup(event)"
+    />
+    <p class="livetypeprint"></p>
+
+    <script>
+      //9a
+      console.log(document.querySelector("button"));
+      //9b
+      document.querySelector(".nineb").innerHTML = "9b done!";
+      //9c
+
+      function headsdisplay() {
+        document.querySelector(".res").innerHTML = "You choose: heads ";
+      }
+
+      function tailsdisplay() {
+        document.querySelector(".res").innerHTML = "You choose: tails ";
+      }
+
+      //9d
+      function getName() {
+        var inputElement = document.querySelector(".nameInput");
+        var inputValue = inputElement.value;
+        document.querySelector(
+          ".name"
+        ).innerHTML = `Your name is ${inputValue}`;
+      }
+
+      function handlenamekeydown(event) {
+        if (event.key === "Enter") {
+          getName();
+        }
+      }
+
+      function handlelivekeyup(event) {
+        var inputElement = document.querySelector(".livetype");
+        var inputValue = inputElement.value;
+        document.querySelector(".livetypeprint").innerHTML = `${inputValue}`;
+      }
+    </script>
+  </body>
+</html>

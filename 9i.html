@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+
+  <body>
+    <button onclick="updateCart(0)">Show Quantity</button>
+    <button onclick="updateCart(1)">Add to Cart</button>
+    <button onclick="updateCart(2)">+2</button>
+    <button onclick="updateCart(3)">+3</button>
+    <button onclick="updateCart(4)">+4</button>
+    <button onclick="updateCart(5)">+5</button>
+    <button onclick="updateCart(-1)">remove from cart</button>
+    <button onclick="updateCart(-2)">-2</button>
+    <button onclick="updateCart(-3)">-3</button>
+
+    <p class="cartquantity"></p>
+
+    <script>
+      let quantity = 0;
+      let res = "";
+      function updateCart(item) {
+        if (quantity + item < 0) {
+          res = `Cart Quantity: ${quantity} cannot Remove item from cart(Not enough items)`;
+        } else if (quantity + item > 10) {
+          res = `Cart Quantity: ${quantity}, cannot add item to cart(Too many items)`;
+        } else {
+          quantity += item;
+
+          res = `Cart Quantity: ${quantity}`;
+        }
+
+        document.querySelector(".cartquantity").innerHTML = `${res}`;
+      }
+    </script>
+  </body>
+</html>
