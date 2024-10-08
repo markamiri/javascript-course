@@ -1,0 +1,48 @@
+.amazon {
+  background-color: rgb(255, 216, 20);
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 16px;
+  border: none;
+}
+.requestNow {
+  color: white;
+  background-color: black;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.schedule {
+  color: black;
+  background-color: rgb(230, 230, 230);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.toggle-button {
+  color: black;
+  background-color: rgb(230, 230, 230);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  font: 16px;
+}
+.on {
+  color: white;
+  background-color: black;
+}

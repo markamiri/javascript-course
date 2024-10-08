@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dom projects</title>
+    <style>
+      body {
+        font-family: Arial;
+      }
+      .sub-button {
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        font-weight: bold;
+        border: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-bottom: 30px;
+      }
+
+      .calculate {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 15px;
+        padding-left: 15px;
+        color: white;
+        background-color: green;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .input-box {
+        padding-top: 13px;
+        padding-bottom: 14px;
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 15px;
+      }
+
+      .is-subbed {
+        background-color: rgb(240, 240, 240);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Youtube subscribe button</p>
+    <button onclick="subscribe()" class="js-subscribe sub-button">
+      Subscribe
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input class="cost input-box" placeholder="Cost of order" />
+    <button class="calculate" onclick="calcShip()">Calculate</button>
+    <p class="result"></p>
+    <script>
+      function subscribe() {
+        const buttonElement = document.querySelector(".js-subscribe");
+
+        if (buttonElement.innerText === "Subscribe") {
+          buttonElement.innerHTML = "Subscribed";
+          buttonElement.classList.add("is-subbed");
+        } else {
+          buttonElement.innerHTML = "Subscribe";
+          buttonElement.classList.remove("is-subbed");
+        }
+      }
+
+      function calcShip() {
+        const cost = document.querySelector(".cost");
+        const result = document.querySelector(".result");
+
+        let cost1 = parseFloat(cost.value) || 0;
+        if (cost1 < 40) {
+          totalcost = cost1 + 10;
+          result.innerHTML = `$ ${totalcost}`;
+        } else {
+          result.innerHTML = `$ ${cost1}`;
+        }
+      }
+    </script>
+  </body>
+</html>

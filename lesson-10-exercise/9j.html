@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body style="background-color: black">
+    <p style="color: white; font-size: 50px" class="result"></p>
+
+    <div>
+      <button
+        style="
+          background-color: rgb(51, 51, 51);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="updateCalc('1')"
+      >
+        1
+      </button>
+      <button
+        style="
+          background-color: rgb(51, 51, 51);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="updateCalc('2')"
+      >
+        2
+      </button>
+      <button
+        style="
+          background-color: rgb(51, 51, 51);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="updateCalc('3')"
+      >
+        3
+      </button>
+      <button
+        style="
+          background-color: rgb(51, 51, 51);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="updateCalc(' + ')"
+      >
+        +
+      </button>
+    </div>
+    <div>
+      <button
+        style="
+          background-color: rgb(51, 51, 51);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="updateCalc('4')"
+      >
+        4
+      </button>
+      <button
+        style="
+          background-color: rgb(51, 51, 51);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="updateCalc('5')"
+      >
+        5
+      </button>
+      <button
+        style="
+          background-color: rgb(51, 51, 51);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="updateCalc('6')"
+      >
+        6
+      </button>
+      <button
+        style="
+          background-color: orange;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="updateCalc(' - ')"
+      >
+        -
+      </button>
+    </div>
+
+    <div>
+      <button
+        style="
+          background-color: rgb(51, 51, 51);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="updateCalc('7')"
+      >
+        7
+      </button>
+      <button
+        style="
+          background-color: rgb(51, 51, 51);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="updateCalc('8')"
+      >
+        8
+      </button>
+      <button
+        style="
+          background-color: rgb(51, 51, 51);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="updateCalc('9')"
+      >
+        9
+      </button>
+      <button
+        style="
+          background-color: orange;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="updateCalc(' * ' )"
+      >
+        *
+      </button>
+    </div>
+    <div>
+      <button
+        style="
+          background-color: rgb(51, 51, 51);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="updateCalc('0')"
+      >
+        0
+      </button>
+      <button
+        style="
+          background-color: rgb(51, 51, 51);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="updateCalc('.')"
+      >
+        .
+      </button>
+      <button
+        style="
+          background-color: rgb(51, 51, 51);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="calculate()"
+      >
+        =
+      </button>
+      <button
+        style="
+          background-color: orange;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          font-size: 25px;
+          margin-right: 7px;
+          margin-bottom: 17px;
+        "
+        onclick="updateCalc(' / ')"
+      >
+        /
+      </button>
+    </div>
+
+    <button
+      style="
+        background-color: rgb(51, 51, 51);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 65px;
+        height: 65px;
+        font-size: 20px;
+        margin-right: 7px;
+        margin-bottom: 17px;
+      "
+      onclick="clearupdate()"
+    >
+      clear
+    </button>
+
+    <script>
+      let res = localStorage.getItem("calculation") || "";
+
+      function updateCalc(item) {
+        res += item;
+        document.querySelector(".result").innerHTML = `${res}`;
+
+        localStorage.setItem("calculation", res);
+      }
+
+      function calculate() {
+        try {
+          res = eval(res);
+          document.querySelector(".result").innerHTML = `${res}`;
+          localStorage.setItem("calculation", res);
+        } catch (error) {
+          document.querySelector(".result").innerHTML = `Error`;
+        }
+      }
+
+      function clearupdate() {
+        res = "";
+        document.querySelector(".result").innerHTML = `${res}`;
+        localStorage.setItem("calculation", res);
+      }
+    </script>
+  </body>
+</html>
